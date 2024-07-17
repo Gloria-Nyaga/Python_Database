@@ -15,7 +15,7 @@ class Teacher(models.Model):
     gender = models.CharField(max_length=10)
     bio = models.TextField()
     profile = models.ImageField()
-    course_code= models.ForeignKey(Student, on_delete=models.CASCADE)
+    course_code= models.ForeignKey(Student, on_delete=models.CASCADE, related_name = 'teacher')
 
     def __str__(self):
-        return f"{self.first_name}, {self.code}"
+        return f"{self.first_name}, {self.course}"

@@ -11,8 +11,8 @@ class Courses(models.Model):
     student_code = models.PositiveSmallIntegerField ()
     student_number = models.PositiveSmallIntegerField ()
     course_fee = models.PositiveSmallIntegerField ()
-    student_code=models.ForeignKey(Student, on_delete=models.CASCADE)
+    student_code=models.ForeignKey(Student, on_delete=models.CASCADE, related_name = 'courses')
 
 
     def __str__(self):
-        return f"{self.course_fee}"
+        return f"{self.course_title}"

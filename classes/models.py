@@ -14,7 +14,7 @@ class Classes(models.Model):
     number_of_desks = models.PositiveSmallIntegerField ()
     number_of_chairs = models.PositiveSmallIntegerField ()
     class_code = models.PositiveSmallIntegerField ()
-    students=models.ForeignKey(Student, on_delete=models.CASCADE)
+    students=models.ForeignKey(Student, on_delete=models.CASCADE, related_name = 'classes')
 
 
     def __str__(self):
